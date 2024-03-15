@@ -1,0 +1,7 @@
+Recently a way through which we can quickly view the import cycle that is happening in the project. There is a package called "godepgraph" and a Linux app "graphviz". Through this, you can generate a dependency map to look over the import cycle.
+How to:
+1. First get the package "go get github.com/kisielk/godepgraph"
+2. Get the application "sudo apt-get install graphviz"
+3. When import cycle occurs, start capi to get the import cycle list.
+4. Write the command " godepgraph -l 1 <import package name>| dot -Tpng -o graph.png"
+Then it will generate png like below.
